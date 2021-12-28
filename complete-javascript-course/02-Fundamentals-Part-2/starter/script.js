@@ -331,44 +331,115 @@
 // // console.log(BMI(78, 1.69));
 // // console.log(BMI(92, 1.95));
 
-const Mark = {
-  firstName: "Mark",
-  lastName: "Miller",
-  mass: 78,
-  height: 1.69,
+// const Mark = {
+//   firstName: "Mark",
+//   lastName: "Miller",
+//   mass: 78,
+//   height: 1.69,
 
-  calcBMI: function () {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  },
-};
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   },
+// };
 
-console.log(Mark.calcBMI());
+// console.log(Mark.calcBMI());
 
-const John = {
-  firstName: "John", //You can also use fullName here!//
-  lastName: "Smith",
-  mass: 92,
-  height: 1.95,
+// const John = {
+//   firstName: "John", //You can also use fullName here!//
+//   lastName: "Smith",
+//   mass: 92,
+//   height: 1.95,
 
-  calcBMI: function () {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  },
-};
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   },
+// };
 
-console.log(John.calcBMI());
+// console.log(John.calcBMI());
 
-if (Mark.bmi > John.bmi) {
-  console.log(
-    `${Mark.firstName}'s BMI (${Mark.calcBMI()}) is higher than ${
-      John.firstName
-    }'s (${John.calcBMI()})!`
-  );
-} else if (John.bmi > Mark.bmi) {
-  console.log(
-    `${John.firstName}'s BMI (${John.calcBMI()}) is higher than ${
-      Mark.firstName
-    }'s (${Mark.calcBMI()})!`
-  );
+// if (Mark.bmi > John.bmi) {
+//   console.log(
+//     `${Mark.firstName}'s BMI (${Mark.calcBMI()}) is higher than ${
+//       John.firstName
+//     }'s (${John.calcBMI()})!`
+//   );
+// } else if (John.bmi > Mark.bmi) {
+//   console.log(
+//     `${John.firstName}'s BMI (${John.calcBMI()}) is higher than ${
+//       Mark.firstName
+//     }'s (${Mark.calcBMI()})!`
+//   );
+// }
+// console.log("Lifting weights repetition 1 🏋🏽‍♂️");
+// console.log("Lifting weights repetition 2 🏋🏽‍♂️");
+// console.log("Lifting weights repetition 3 🏋🏽‍♂️");
+// console.log("Lifting weights repetition 4 🏋🏽‍♂️");
+// console.log("Lifting weights repetition 5 🏋🏽‍♂️");
+// console.log("Lifting weights repetition 6 🏋🏽‍♂️");
+// console.log("Lifting weights repetition 7 🏋🏽‍♂️");
+// console.log("Lifting weights repetition 8 🏋🏽‍♂️");
+// console.log("Lifting weights repetition 9 🏋🏽‍♂️");
+// console.log("Lifting weights repetition 10 🏋🏽‍♂️");
+
+//for loop keeps running while condition is TRUE
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep} 🏋🏽‍♂️`);
+// }
+
+// const jade = [
+//   "Jade",
+//   "Woods",
+//   2037 - 1993,
+//   "actress",
+//   ["Michael", "Peter", "Steven"],
+// ];
+
+// const types = [];
+
+// for (let i = 0; i < jade.length; i++) {
+//   //Reading from Jade Array
+//   console.log(jade[i]);
+
+//   //Filling Types Array
+//   types[i] = typeof jade[i];
+// }
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2037 - years[i]);
+// }
+// console.log(ages);
+
+// //Continue and Break//
+// for (let i = 0; i < jade.length; i++) {
+//   if (typeof jade[i] !== "string") continue;
+//   console.log(jade[i]);
+// }
+
+// for (let i = 0; i < jade.length; i++) {
+//   if (typeof jade[i] === "number") break;
+//   console.log(jade[i]);
+// }
+const jade = [
+  "Jade",
+  "Woods",
+  2037 - 1993,
+  "actress",
+  ["Michael", "Peter", "Steven"],
+];
+for (let i = jade.length - 1; i >= 0; i--) {
+  console.log(i, jade[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------Starting Exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋🏽‍♂️`);
+  }
 }
