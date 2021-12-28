@@ -425,21 +425,65 @@
 //   if (typeof jade[i] === "number") break;
 //   console.log(jade[i]);
 // }
-const jade = [
-  "Jade",
-  "Woods",
-  2037 - 1993,
-  "actress",
-  ["Michael", "Peter", "Steven"],
-];
-for (let i = jade.length - 1; i >= 0; i--) {
-  console.log(i, jade[i]);
+// const jade = [
+//   "Jade",
+//   "Woods",
+//   2037 - 1993,
+//   "actress",
+//   ["Michael", "Peter", "Steven"],
+// ];
+// for (let i = jade.length - 1; i >= 0; i--) {
+//   console.log(i, jade[i]);
+// }
+
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`-------Starting Exercise ${exercise}`);
+
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋🏽‍♂️`);
+//   }
+// }
+
+//While Loop
+// for (let rep = 1; rep <= 10; rep++) {
+//   // console.log(`Lifting weights repetition ${rep} 🏋🏽‍♂️`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//   // console.log(`WHILE: Lifting weights repetition ${rep} 🏋🏽‍♂️`);
+//   rep++;
+// }
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) console.log(`Loop is about to end...`);
+// }
+
+//Coding Challenge #4//
+const totals = [22, 295, 176, 4040, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+for (let i = 0; i < totals.length; i++) {
+  tips.push(calcTip(totals[i]));
 }
 
-for (let exercise = 1; exercise < 4; exercise++) {
-  console.log(`-------Starting Exercise ${exercise}`);
-
-  for (let rep = 1; rep < 6; rep++) {
-    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋🏽‍♂️`);
+function calcTip(billtotal) {
+  if (billtotal > 300 && billtotal < 50) {
+    return billtotal * 0.2;
   }
+
+  return billtotal * 0.15;
 }
+
+const totalAmount = [];
+
+for (let i = 0; i < totals.length; i++) {
+  totalAmount.push(tips[i] + totals[i]);
+  // console.log(totalAmount[i]);
+}
+
+console.log(totalAmount);
