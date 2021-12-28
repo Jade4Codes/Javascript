@@ -286,36 +286,89 @@
 //   `${jade.firstName} has ${jade.friends.length} friends, and her best friend is called ${jade.friends[0]}`
 // );
 
-const jade = {
-  firstName: "Jade",
-  lastName: "Woods",
-  birthYear: 1993,
-  job: "actress",
-  friends: ["Miguel", "Peter", "Steven"],
-  hasDriversLicense: true,
+// const jade = {
+//   firstName: "Jade",
+//   lastName: "Woods",
+//   birthYear: 1993,
+//   job: "actress",
+//   friends: ["Miguel", "Peter", "Steven"],
+//   hasDriversLicense: true,
 
-  calcAge: function (birthYear) {
-    return 2037 - birthYear;
-  },
+//   calcAge: function (birthYear) {
+//     return 2037 - birthYear;
+//   },
 
-  // calcAge: function () {
-  //   // console.log(this);
-  //   return 2037 - this.birthYear;
-  // },
+//   // calcAge: function () {
+//   //   // console.log(this);
+//   //   return 2037 - this.birthYear;
+//   // },
 
-  // calcAge: function () {
-  //   this.age = 2037 - this.birthYear;
-  //   return this.age;
-  // },
-  getSummary: function () {
-    return `${jade.firstName} is a ${jade.calcAge(1993)}-year old ${
-      jade.job
-    } and she has ${jade.hasDriversLicense ? "a" : "no"} driver's license.`;
+//   // calcAge: function () {
+//   //   this.age = 2037 - this.birthYear;
+//   //   return this.age;
+//   // },
+//   getSummary: function () {
+//     return `${jade.firstName} is a ${jade.calcAge(1993)}-year old ${
+//       jade.job
+//     } and she has ${jade.hasDriversLicense ? "a" : "no"} driver's license.`;
+//   },
+// };
+// console.log(jade.calcAge(1993));
+
+// // console.log(
+// //   `${jade.firstName} is a ${jade.calcAge(1993)}-year old ${jade.job}.`
+// // );
+// console.log(jade.getSummary());
+
+// //Coding Challenge #3//
+
+// // function BMI(mass, height) {
+// //   const totalBmi = mass / (height * height);
+// //   return totalBmi;
+// // }
+// // const markBmi = BMI(78, 1.69);
+// // const johnBmi = BMI(92, 1.95);
+// // console.log(BMI(78, 1.69));
+// // console.log(BMI(92, 1.95));
+
+const Mark = {
+  firstName: "Mark",
+  lastName: "Miller",
+  mass: 78,
+  height: 1.69,
+
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
   },
 };
-console.log(jade.calcAge(1993));
 
-// console.log(
-//   `${jade.firstName} is a ${jade.calcAge(1993)}-year old ${jade.job}.`
-// );
-console.log(jade.getSummary());
+console.log(Mark.calcBMI());
+
+const John = {
+  firstName: "John", //You can also use fullName here!//
+  lastName: "Smith",
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+};
+
+console.log(John.calcBMI());
+
+if (Mark.bmi > John.bmi) {
+  console.log(
+    `${Mark.firstName}'s BMI (${Mark.calcBMI()}) is higher than ${
+      John.firstName
+    }'s (${John.calcBMI()})!`
+  );
+} else if (John.bmi > Mark.bmi) {
+  console.log(
+    `${John.firstName}'s BMI (${John.calcBMI()}) is higher than ${
+      Mark.firstName
+    }'s (${Mark.calcBMI()})!`
+  );
+}
