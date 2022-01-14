@@ -67,6 +67,238 @@ const restaurant = {
   },
 };
 
+//CODING CHALLENGE #4//
+
+// document.body.append(document.createElement('textarea'));
+// document.body.append(document.createElement('button'));
+// const text = document.querySelector('textarea').value;
+
+// const btn = document.querySelector('.btn-1');
+
+// const txtArea = document.querySelector('.textarea-1');
+
+// btn.addEventListener('click', clickHandlr, false);
+
+// function clickHandlr() {
+//   // console.log(txtArea.value);
+
+//   const txtAreaVal = txtArea.value.split(' ');
+
+//   console.log(txtAreaVal);
+// }
+
+// function camelCaseThis(word) {
+//   const newWords = word.split('_');
+//   const [firstWord, secondWord] = newWords;
+//   const secondWordUpper =
+//     secondWord[0].toUpperCase() + secondWord.slice(1).toLowerCase();
+//   const finalWord = `${firstWord}${secondWordUpper}`;
+//   console.log(finalWord);
+// }
+
+// document.querySelector('button').addEventListener('click', doThis);
+
+// camelCaseThis('jade_case');
+// camelCaseThis('first_name');
+// camelCaseThis('Some_Variable');
+// camelCaseThis('calculate_AGE');
+// camelCaseThis('delayed_departure');
+
+// const array1 = [
+//   'jade_case',
+//   'first_name',
+//   'Some_Variable',
+//   'calculate_AGE',
+//   'delayed_departure',
+// ];
+
+// for (const wordss of array1) {
+//   camelCaseThis(wordss);
+// }
+
+//STRINGS PART 3//
+//Split and Join//
+// console.log('a+very+nice+string'.split('+'));
+// console.log('Jade Woods'.split(' '));
+
+// const [firstName, lastName] = 'Jade Woods'.split(' ');
+
+// const newName = ['Ms.', firstName, lastName.toUpperCase()].join(' ');
+// console.log(newName);
+
+// const capitalizeName = function (name) {
+//   const names = name.split(' ');
+//   const namesUpper = []; // storing each loop result in this array
+
+//   for (const n of names) {
+//     // namesUpper.push(n[0].toUpperCase() + n.slice(1))
+//     namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+//   }
+//   console.log(namesUpper.join(' '));
+// };
+
+// capitalizeName('jessica ann smith davis');
+// capitalizeName('jade woods');
+
+// // Padding
+// const message = 'Go to gate 23!';
+// console.log(message.padStart(20, '+').padEnd(30, '+'));
+
+// const maskCreditCard = function (number) {
+//   const str = number + '';
+//   const last = str.slice(-4);
+//   return last.padStart(str.length, '*');
+// };
+
+// console.log(maskCreditCard(4337842733826712));
+// console.log(maskCreditCard(33826712));
+// console.log(maskCreditCard('6352424161728922'));
+
+// //Repeat//
+// const message2 = 'Bad weather...All Departures Delayed...';
+// console.log(message2.repeat(5));
+
+// const planesInLine = function (n) {
+//   console.log(`There are ${n} planes in line ${'🛩'.repeat(n)}`);
+// };
+
+// planesInLine(5);
+// planesInLine(3);
+// planesInLine(12);
+
+//Strings Part 2//
+// const airline = 'TAP Air Portugal';
+// const plane = 'A320';
+
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
+
+// //To Fix Capitalization//
+
+// const passenger = 'jAde'; //Jade
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect =
+//   passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
+
+// //Comparing Emails//
+// const email = 'hello@jonas.io';
+// const loginEmail = '  Hello@Jonas.Io \n';
+
+// //LONG APPROACH//
+// // const lowerEmail = loginEmail.toLowerCase();
+// // const trimmedEmail = lowerEmail.trim();
+// // console.log(trimmedEmail);
+
+// const normalizedEmail = loginEmail.toLowerCase().trim();
+// console.log(normalizedEmail);
+// console.log(email === normalizedEmail);
+
+// //REPLACING STRINGS//
+// const priceGB = '288,97£';
+// const priceUS = priceGB.replace('£', '$').replace(',', '.');
+// console.log(priceUS);
+
+// const announcement =
+//   'All passengers come to boarding door 23. Boarding door 23!';
+
+// console.log(announcement.replaceAll('door', 'gate'));
+
+// console.log(announcement.replaceAll(/door/g, 'gate'));
+
+// //Booleans//
+// const plane2 = 'Airbus A320neo';
+// console.log(plane2.includes('A320'));
+// console.log(plane2.includes('Boeing'));
+// console.log(plane2.startsWith('Airb'));
+
+// if (plane2.startsWith('Airbus') && plane2.endsWith('neo')) {
+//   console.log('Part of the NEW Airbus Family');
+// }
+
+// //Practice Exercise
+// const checkBaggage = function (items) {
+//   const baggage = items.toLowerCase();
+//   if (baggage.includes('knife') || baggage.includes('gun')) {
+//     console.log('You are NOT allowed to board!');
+//   } else {
+//     console.log('Welcome aboard!');
+//   }
+// };
+
+// checkBaggage('I have a laptop, some food, and a pocketknife');
+// checkBaggage('Socks and camera');
+// checkBaggage('Got some snacks and a gun for protection');
+
+//Stings Part 1 //
+// console.log(plane[0]);
+// console.log('B307'[0]);
+
+// console.log(airline.length);
+// console.log('B307'.length);
+
+// console.log(airline.indexOf('r'));
+// console.log(airline.lastIndexOf('r'));
+// console.log(airline.indexOf('r'));
+// console.log(airline.indexOf('Portugal'));
+
+// console.log(airline.slice(4));
+// console.log(airline.slice(4, 7));
+
+// console.log(airline.slice(0, airline.indexOf(' ')));
+// console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+// console.log(airline.slice(-2));
+// console.log(airline.slice(1, -1));
+
+// const checkMiddleSeat = function (seat) {
+//   //B and E are middlle seats
+//   const s = seat.slice(-1);
+//   if (s === 'B' || s == 'E') console.log('You got the middle seat');
+//   else console.log('You got lucky');
+// };
+
+// checkMiddleSeat('11B');
+// checkMiddleSeat('23C');
+// checkMiddleSeat('3E');
+
+// const rest = new Map();
+// rest.set('name', 'Classico Italiano');
+// rest.set(1, 'Firenze, Italy');
+// rest.set(2, 'Lisbon, Portugal');
+
+//SETS//
+////////////
+// const ordersSet = new Set([
+//   'Pasta',
+//   'Pizza',
+//   'Pizza',
+//   'Risotto',
+//   'Pasta',
+//   'Pizza',
+// ]);
+// console.log(ordersSet);
+
+// console.log(new Set('Jade'));
+
+// console.log(ordersSet.size);
+// console.log(ordersSet.has('Pizza'));
+// ordersSet.add('Garlic Bread');
+// ordersSet.delete('Risotto');
+// console.log(ordersSet);
+
+// for (const order of ordersSet) console.log(order);
+
+// //Example
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
+
+// console.log(
+//   new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+// );
+// console.log(new Set('Jadewoods').size);
+
 //property NAMES
 // const properties = Object.keys(hours);
 // console.log(properties);
@@ -534,72 +766,72 @@ const restaurant = {
 // }
 // console.log(betOdds);
 
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrusia Dortmund',
-  players: [
-    [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alba',
-      'Davies',
-      'Kimich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lebowski',
-    ],
-    [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
-    ],
-  ],
-  score: '4:0',
-  scored: ['Lebowski', 'Gnarby', 'Lebowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrusia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alba',
+//       'Davies',
+//       'Kimich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lebowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lebowski', 'Gnarby', 'Lebowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
 
-const playersSored = game.scored;
+// const playersSored = game.scored;
 
-for (const [index, player] of playersSored.entries()) {
-  console.log(`Goal ${index + 1}: ${player}`);
-}
+// for (const [index, player] of playersSored.entries()) {
+//   console.log(`Goal ${index + 1}: ${player}`);
+// }
 
-const betOdds = game.odds;
+// const betOdds = game.odds;
 
-let avg = 0;
-for (const key in betOdds) {
-  avg = avg + betOdds[key];
-}
-avg = avg / Object.keys(betOdds).length;
-console.log(Math.round(avg));
+// let avg = 0;
+// for (const key in betOdds) {
+//   avg = avg + betOdds[key];
+// }
+// avg = avg / Object.keys(betOdds).length;
+// console.log(Math.round(avg));
 
-for (const el in betOdds) {
-  let word = '';
+// for (const el in betOdds) {
+//   let word = '';
 
-  if (game[el]) {
-    word = `victory ${game[el]}`;
-  } else {
-    word = 'draw';
-  }
-  console.log(`Odd of ${word}: ${betOdds[el]}`);
+//   if (game[el]) {
+//     word = `victory ${game[el]}`;
+//   } else {
+//     word = 'draw';
+//   }
+//   console.log(`Odd of ${word}: ${betOdds[el]}`);
 
-  // console.log(el);
-}
-console.log(betOdds);
+//   // console.log(el);
+// }
+// console.log(betOdds);
