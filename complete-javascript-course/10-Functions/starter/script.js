@@ -194,8 +194,64 @@
 //Coding Challenge #1//
 //////////////////////////
 
-const poll = {
-  question: 'What is your favorite programming language?',
-  options: ['0: Javascript', '1: Python', '2: Rust', '3: C++'],
-  answers: new Array(4).fill(0),
+// const poll = {
+//   question: 'What is your favorite programming language?',
+//   options: ['0: Javascript', '1: Python', '2: Rust', '3: C++'],
+//   answers: [0, 0, 0, 0],
+
+//   registerNewAnswer() {
+//     //Get Answer//
+//     const answer = Number(
+//       prompt(
+//         `${this.question}\n${this.options.join('\n')}\n(Write option number)`
+//       )
+//     );
+
+//     //Register New Answer//
+//     typeof answer === 'number' &&
+//       answer < this.answers.length &&
+//       this.answers[answer]++;
+
+//     this.displayResults();
+//     this.displayResults('string');
+//   },
+//   displayResults(type = 'array') {
+//     if (type === 'array') {
+//       console.log(this.answers);
+//     } else if (type === 'string') {
+//       console.log(`Poll results are ${this.answers.join(', ')}`);
+//     }
+//   },
+// };
+
+// document
+//   .querySelector('.poll')
+//   .addEventListener('click', poll.registerNewAnswer.bind(poll));
+// const runOnce = function () {
+//   console.log('This will never run again');
+// };
+// runOnce();
+
+// // IIFE
+// (function () {
+//   console.log('This will never run again');
+// })();
+
+// (() => console.log('This will ALSO never run again'))();
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
 };
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
+
+console.dir(booker);
