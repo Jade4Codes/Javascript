@@ -79,6 +79,21 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    console.log(acc);
+    // console.log(acc.)
+
+    acc.username = acc.owner //Sarah Smith
+      .toLowerCase() // sarah smith
+      .split(' ') //[sarah, smith]
+      .map(name => name[0]) //[s, s]
+      .join(''); //ss
+  });
+};
+createUsernames(accounts); // stw
+console.log(accounts);
+
 // console.log(containerMovements.innerHTML);
 
 /////////////////////////////////////////////////
@@ -177,28 +192,48 @@ displayMovements(account1.movements);
 // Data 2: Julia's data [9, 16, 6, 8, 3],
 // Kate's data [10, 5, 6, 1, 4]
 
-const dogsJulia = [3, 5, 2, 12, 7];
-const dogsKate = [4, 1, 15, 8, 3];
+// const dogsJulia = [3, 5, 2, 12, 7];
+// const dogsKate = [4, 1, 15, 8, 3];
 
-const dogsJulia2 = [9, 16, 6, 8, 3];
-const dogsKate2 = [10, 5, 6, 1, 4];
+// const dogsJulia2 = [9, 16, 6, 8, 3];
+// const dogsKate2 = [10, 5, 6, 1, 4];
 
-const checkDogs = function (j, k) {
-  let dogsJuliaNew = j;
-  console.log(dogsJuliaNew);
-  console.log(dogsJuliaNew.slice(1, -2));
-  const juliasFixedData = dogsJuliaNew.slice(1, -2);
-  const completedData = juliasFixedData.concat(k);
-  console.log(completedData);
+// const checkDogs = function (j, k) {
+//   let dogsJuliaNew = j;
+//   console.log(dogsJuliaNew);
+//   console.log(dogsJuliaNew.slice(1, -2));
+//   const juliasFixedData = dogsJuliaNew.slice(1, -2);
+//   const completedData = juliasFixedData.concat(k);
+//   console.log(completedData);
 
-  for (const [i, v] of completedData.entries()) {
-    if (v > 3) {
-      console.log(`Dog number ${i + 1} is an adult and is ${v} years old`);
-    } else {
-      console.log(`Dog number ${i + 1} is still a puppy and is ${v} years old`);
-    }
-  }
-};
+//   for (const [i, v] of completedData.entries()) {
+//     if (v > 3) {
+//       console.log(`Dog number ${i + 1} is an adult and is ${v} years old`);
+//     } else {
+//       console.log(`Dog number ${i + 1} is still a puppy and is ${v} years old`);
+//     }
+//   }
+// };
 
-checkDogs(dogsJulia, dogsKate);
-checkDogs(dogsJulia2, dogsKate2);
+// checkDogs(dogsJulia, dogsKate);
+// checkDogs(dogsJulia2, dogsKate2);
+
+//MAP METHOD//
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const eurToUsd = 1.1;
+
+// const movementsUSD = movements.map(function (mov) {
+//   return mov * eurToUsd;
+// });
+
+// //Arrow//
+// const movementsUSDfor = movements.map(mov => mov * eurToUsd);
+
+// const movementsDescriptions = movements.map((mov, i, arr) => {
+//   if (mov > 0) {
+//     return `Movement ${i + 1}: You deposited ${mov}`;
+//   } else {
+//     return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
+//   }
+// });
